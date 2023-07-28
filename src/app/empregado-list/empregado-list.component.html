@@ -1,0 +1,26 @@
+<div class = "row">
+    <h3>Lista de Empregados</h3>
+</div>
+
+<table class = "table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th> Nome</th>
+            <th> Cargo </th>
+            <th> E-mail</th>
+            <th> Ações </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let empregado of empregados" >
+            <td> {{ empregado.nome }} </td>
+            <td> {{ empregado.cargo }} </td>
+            <td> {{ empregado.email }} </td>
+            <td>
+                <button (click) = "empregadoDetails(empregado.id)" class = "btn" style="background-color: #EF145B;"><b>Ver</b></button>
+                <button (click) = "updateEmpregado(empregado.id)" class = "btn" style="background-color: #EF145B;  margin-left: 10px"><b>Editar</b></button>
+                <button (click) = "deleteEmpregado(empregado.id)" class = "btn" style="background-color: #EF145B; margin-left: 10px"><b>Remover</b></button>
+            </td>
+        </tr>
+    </tbody>
+</table>

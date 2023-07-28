@@ -1,0 +1,15 @@
+<nav class="navbar navbar-expand-sm" style="background-color: #EF145B;">
+  <ul class = "navbar-nav">
+      <li class = "nav-item">
+          <a routerLink="empregados" routerLinkActive="active" class="nav-link" ><b>Lista de Empregados</b></a>
+      </li>
+      <li class = "nav-item">
+          <a routerLink="create-empregado" routerLinkActive="active" class="nav-link" ><b>Novo Empregado</b></a>
+      </li>
+  </ul>
+</nav>
+
+<h1 class="text-center" style="padding: 30px;"> {{title}} </h1>
+<div class = "container">
+  <router-outlet></router-outlet>
+</div>
